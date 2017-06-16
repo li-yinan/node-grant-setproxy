@@ -3,7 +3,7 @@ mac only!!!
 setup proxy, type password only once
 ## Usage:
 ```javascript
-import {exec} from 'node-grant-setproxy';
+import {exec} from 'grant-setproxy';
 exec('-setwebproxystate', 'wi-fi', 'on');
 
 ```
