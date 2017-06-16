@@ -4,12 +4,12 @@ import fs from 'fs';
 import childProcess  from 'child_process';
 
 let exeCmd = path.join(__dirname, '/tools/proxysetup');
+let grantCmd = path.join(__dirname, '/tools/grant.sh');
 
 export function grant() {
     if (!hasGrant()) {
-        let cmd = `chown 0:0 ${exeCmd};chmod u+s ${exeCmd}`;
         return new Promise((resolve, reject) => {
-            sudo.exec(cmd, {name: 'darp'}, function (err) {
+            sudo.exec(grantCmd, {name: 'darp'}, function (err) {
                 if (err) {
                     return reject(err);
                 }
