@@ -2,7 +2,7 @@
   "name": "grant-setproxy",
   "version": "1.0.1",
   "description": "setup proxy, type password only once",
-  "main": "index.js",
+  "main": "lib/main.js",
   "scripts": {
     "build": "scripts/build.sh",
     "prepublish": "npm run build",
