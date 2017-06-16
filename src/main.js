@@ -41,4 +41,4 @@ export async function exec(...args) {
     return await exe(...args);
 }
 
-exec('-setwebproxystate', 'wi-fi', 'on');
+// exec('-setwebproxystate', 'wi-fi', 'on');
