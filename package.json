@@ -1,0 +1,31 @@
+{
+  "name": "grant-setproxy",
+  "version": "1.0.0",
+  "description": "setup proxy, type password only once",
+  "main": "index.js",
+  "scripts": {
+    "build": "scripts/build.sh",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/li-yinan/node-grant-setproxy.git"
+  },
+  "keywords": [
+    "networksetup",
+    "proxy"
+  ],
+  "author": "liyinan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/li-yinan/node-grant-setproxy/issues"
+  },
+  "homepage": "https://github.com/li-yinan/node-grant-setproxy#readme",
+  "dependencies": {
+    "sudo-prompt": "^7.0.0",
+    "babel-core": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  }
+}
