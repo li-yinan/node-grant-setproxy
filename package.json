@@ -5,7 +5,7 @@
   "main": "lib/main.js",
   "scripts": {
     "build": "scripts/build.sh",
-    "prepublish": "npm run build",
+    "prepublish": "npm run build && npm version patch",
     "test": "scripts/test.sh"
   },
   "repository": {
@@ -22,10 +22,13 @@
     "url": "https://github.com/li-yinan/node-grant-setproxy/issues"
   },
   "homepage": "https://github.com/li-yinan/node-grant-setproxy#readme",
-  "dependencies": {
-    "sudo-prompt": "^7.0.0",
+  "devdependencies": {
     "babel-core": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1"
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0"
+  },
+  "dependencies": {
+    "sudo-prompt": "^7.0.0"
   }
 }
