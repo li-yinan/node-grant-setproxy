@@ -1,6 +1,6 @@
 {
   "name": "grant-setproxy",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "setup proxy, type password only once",
   "main": "lib/main.js",
   "scripts": {
