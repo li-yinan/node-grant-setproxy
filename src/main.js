@@ -5,11 +5,12 @@ import childProcess  from 'child_process';
 
 let exeCmd = path.join(__dirname, '/tools/proxysetup');
 let grantCmd = path.join(__dirname, '/tools/grant.sh');
+let dialogName = '';
 
-export function grant() {
+function grant() {
     if (!hasGrant()) {
         return new Promise((resolve, reject) => {
-            sudo.exec(grantCmd, {name: 'darp'}, function (err) {
+            sudo.exec(grantCmd, {name: dialogName}, function (err) {
                 if (err) {
                     return reject(err);
                 }
@@ -19,7 +20,7 @@ export function grant() {
     }
 }
 
-export function exe(...args) {
+function exe(...args) {
     let cmd = `${exeCmd} ${args.join(' ')}`;
     return new Promise((resolve, reject) => {
         childProcess.exec(cmd, (error, stdout, stderr) => {
@@ -31,14 +32,16 @@ export function exe(...args) {
     });
 }
 
-export function hasGrant() {
+function hasGrant() {
     let stat = fs.statSync(exeCmd);
     return stat.uid === 0;
+}
+
+export function setDialogName(name) {
+    dialogName = name;
 }
 
 export async function exec(...args) {
     await grant();
     return await exe(...args);
 }
-
-// exec('-setwebproxystate', 'wi-fi', 'on');

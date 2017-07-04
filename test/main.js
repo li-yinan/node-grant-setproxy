@@ -1,3 +1,5 @@
-import {exec} from '../src/main';
+import {exec, setDialogName} from '../src/main';
 
-exec('-setwebproxystate', 'wi-fi', 'on');
+
+setDialogName('hello world');
+exec('-setwebproxystate', 'Wi-Fi', 'on');
