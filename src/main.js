@@ -5,7 +5,7 @@ import childProcess  from 'child_process';
 
 let exeCmd = path.join(__dirname, '/tools/proxysetup');
 let grantCmd = path.join(__dirname, '/tools/grant.sh');
-let dialogName = '';
+let dialogName = 'title';
 
 function grant() {
     if (!hasGrant()) {

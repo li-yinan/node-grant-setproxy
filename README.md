@@ -38,3 +38,15 @@ exec('-setwebproxystate', 'Wi-Fi', 'on').then(function () {
     exec('-setwebproxystate', 'Wi-Fi', 'off');
 });
 ```
+
+## Example:
+```javascript
+process.on('SIGINT', async function () {
+    // disable proxy when control-c
+    await exec('-setwebproxystate', 'Wi-Fi', 'off');
+});
+
+// set proxy to 127.0.0.1:8080
+await exec('-setwebproxy', 'Wi-Fi', '127.0.0.1', '8080');
+```
+
